@@ -1,0 +1,62 @@
+<div class="header">
+  <div class="header__icons">
+    <div
+      class="header__icon"
+      [ngClass]="{ active: isActive === 'home' }"
+      routerLink="home/trendingM"
+      (click)="isActive = 'home'"
+    >
+      <span class="material-icons"> home </span>
+      <p>Home</p>
+    </div>
+
+    <div
+      class="header__icon"
+      [ngClass]="{ active: isActive === 'trending' }"
+      (click)="isActive = 'trending'"
+    >
+      <span class="material-icons"> flash_on </span>
+      <p>Trending</p>
+    </div>
+
+    <div
+      class="header__icon"
+      [ngClass]="{ active: isActive === 'verified' }"
+      (click)="isActive = 'verified'"
+    >
+      <span class="material-icons"> live_tv </span>
+      <p>Verified</p>
+    </div>
+
+    <div
+      class="header__icon"
+      [ngClass]="{ active: isActive === 'collections' }"
+      (click)="isActive = 'collections'"
+    >
+      <span class="material-icons"> video_library </span>
+      <p>Collections</p>
+    </div>
+
+    <div
+      class="header__icon"
+      [ngClass]="{ active: isActive === 'search' }"
+      (click)="isActive = 'search'"
+    >
+      <span class="material-icons"> search </span>
+      <p>Search</p>
+    </div>
+
+    <div
+      class="header__icon"
+      [ngClass]="{ active: isActive === 'account' }"
+      routerLink="account"
+      (click)="isActive = 'account'"
+    >
+      <span class="material-icons"> perm_identity </span>
+      <p>Account</p>
+    </div>
+  </div>
+  <div class="header__logo">
+    <img src="../../../assets/hulo_logo.png" alt="" />
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.movieCard {
+  max-width: 500px;
+  height: 420px;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  /* background-color: violet; */
+  transition: transform 100ms;
+}
+
+.movieCard:hover {
+  transform: scale(1.09);
+}
+
+.movieCard > img {
+  height: 300px;
+  object-fit: contain; /* to scale the picture keeping aspec ratio*/
+  width: 500px;
+  margin-bottom: 5px;
+}
+
+.movieCard > h2 {
+  letter-spacing: 1px;
+  margin-bottom: -3px;
+}
+
+.movieCard__overview {
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* after 2 line show ... */
+  -webkit-box-orient: vertical;
+}
+
+.movieCard__stats {
+  display: none;
+}
+
+.movieCard:hover > .movieCard__stats {
+  display: inline;
+}

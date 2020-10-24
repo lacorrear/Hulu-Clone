@@ -1,0 +1,74 @@
+* {
+  --main-header-height: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+/* SHIFT+Mouse scroll wheel to scroll horizontally */
+.header::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scroolbar for IE, Edge and Firefox */
+.header {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.header__icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  /* background-color: aquamarine; */
+}
+
+.header__icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  max-height: var(--main-header-height);
+  width: 120px;
+  align-items: center;
+  outline: 0; /* avoid routerlink creates a outline box*/
+}
+
+.header__icon > .material-icons {
+  font-size: 30px;
+}
+
+.header__icon.active > p {
+  display: inline-flex;
+}
+
+.header__icon:hover > p {
+  display: inline-flex;
+}
+
+.header__icon > p {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: small;
+  display: none;
+}
+
+/* ---- LOGO ---- */
+.header__logo {
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: crimson; */
+}
+
+.header__logo > img {
+  object-fit: contain;
+  padding-right: 30px;
+  height: var(--main-header-height);
+}

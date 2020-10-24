@@ -1,0 +1,28 @@
+<div class="movieCard">
+  <img
+    *ngIf="movie.backdrop_path"
+    [src]="pictureURL + movie.backdrop_path"
+    alt="Movie Photo"
+  />
+  <img
+    *ngIf="!movie.backdrop_path"
+    [src]="pictureURL + movie.poster_path"
+    alt="Movie Photo"
+  />
+  <p class="movieCard__overview">{{ movie.overview }}</p>
+  <h2>
+    <b *ngIf="movie.title"> {{ movie.title }} </b>
+    <b *ngIf="!movie.title"> {{ movie.name }} </b>
+  </h2>
+  <p class="movieCard__stats">
+    <span *ngIf="movie.media_type">
+      {{ movie.media_type }}
+    </span>
+    <span *ngIf="movie.release_date || movie.first_air_date">
+      <span>&#8226;</span> {{ movie.release_date }} {{ movie.first_air_date }}
+    </span>
+    &nbsp;
+    <span class="material-icons"> thumb_up_alt </span>
+    {{ movie.vote_count }}
+  </p>
+</div>

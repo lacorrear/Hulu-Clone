@@ -1,0 +1,7 @@
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* See in order to implement Animate.css https://medium.com/better-programming/angular-animate-css-in-five-easy-steps-624b337169ad */
